@@ -4,8 +4,9 @@
 	"@type": "BreadcrumbList",
 	"itemListElement": [<?php
 						$home = 'Home';
+						$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 						$path = array_filter(explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
-						$base = 'https://' . $_SERVER['HTTP_HOST'] . '/';
+						$base = $protocol . '://' . $_SERVER['HTTP_HOST'] . '/';
 
 						$breadcrumbs = Array($home.'::'.$base);
 
