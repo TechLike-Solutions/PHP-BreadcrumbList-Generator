@@ -13,12 +13,12 @@ This simple PHP script dynamically generates a JSON-LD BreadcrumbList for SEO-fr
 + Clone or download the repository.
 + Include the script in your PHP page:
 
-```
+```php
 include 'breadcrumb-generator.php';
 ```
 
 ## 📄 Example Output
-```
+```json
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
